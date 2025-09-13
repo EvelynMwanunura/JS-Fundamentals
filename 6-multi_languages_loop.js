@@ -1,9 +1,17 @@
 const languages = ["C is fun", "Python is cool", "JavaScript is amazing"];
 
+let i = 0;
 let output = "";
-for (let i = 0; i < languages.length; i++) {
+
+while (i < languages.length) {
   output += languages[i];
-  if (i < languages.length - 1) output += "\n"; // add newline except after last
+  i++;
+
+  let addNewline = i;
+  while (addNewline < languages.length) {
+    output += "\n";
+    break;
+  }
 }
 
 console.log(output);
